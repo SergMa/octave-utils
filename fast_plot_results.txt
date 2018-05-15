@@ -1,0 +1,26 @@
+Test platform:
+
+Pentium Core i5
+8 Gb RAM
+Windows 7
+Octave 4.2.2
+graphics_toolkit qt
+
+test.m
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+x=1:1000000;
+y=sin(x/10000);
+
+figure(1);
+plot(x,y);
+
+figure(2);
+fast_plot(x,y);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Elapsed time from (start to real end of plotting data), sec:
+
+size(x)    plot()   fast_plot()
+1000000    6.5      1.6
+10000000   >60      2.8
