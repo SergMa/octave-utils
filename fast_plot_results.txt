@@ -11,16 +11,17 @@ test.m
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 x=1:1000000;
 y=sin(x/10000);
-
 figure(1);
-plot(x,y);
 
-figure(2);
-fast_plot(x,y);
+if 1
+  plot(x,y);
+else
+  fast_plot(x,y);
+end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Elapsed time from (start to real end of plotting data), sec:
+Elapsed time from start to the real end of plotting data on figure canvas:
 
 size(x)    plot()   fast_plot()
-1000000    6.5      1.6
-10000000   >60      2.8
+1000000    6.5 sec  1.6 sec
+10000000   >60 sec  2.8 sec
